@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    max-width: 700px;
+    padding: 0 30px;
+    margin: 20px auto;
+}
+.card_header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_header div {
+    width: 80%;
+    margin-right: 10px;
+}
+.card_body{
+    padding: 40px;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border: 1px solid rgba(192, 192, 192, 0.349);
+}
+.card_body div:nth-child(1){
+    display: flex;
+    align-items: center;
+}
+.card_body div:nth-child(1) img {
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.card_body .name{
+    font-size: 30px;
+    text-align: start;
+    color: rgb(62, 62, 62);
+}
+.card_body .username{
+    transition: .4s;
+    cursor: pointer;
+    color:#10c085 ;
+    display: block;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.card_body .username:hover{
+    color:#0ddb96;
+}
+.card_body .user_bio{
+    color: rgb(62, 62, 62);
+    display: block;
+    text-align: start;
+    font-size: 15px;
+}
+.card_body .statistic_section{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.statistic_section div {
+    color: #ffffff;
+    background: #10c085;
+    margin-top: 10px;
+    max-width: 150px;
+    margin-right: 10px;
+    padding:2px  8px;
+    border-radius: 6px;
+}
+.statistic_section span{
+    margin-left: 5px;
+}
+.statistic_section p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.others{
+    margin-top: 10px;
+}
+.others p {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    display: block;
+}
+.others p span {
+    color: rgb(53, 53, 53);
+    padding: 4px 6px;
+    border-radius: 6px;
+    text-decoration: underline;
+}
+.others i {
+    color: #0cbc82;
+    margin-right: 5px;
+}
+
+.others .link {
+    cursor: pointer;
+}
+
+.others .link:hover{
+    color: #4e4e4e;
+}
+.card_header input::placeholder{
+    color: gray;
+}
+
+
+
+/* Responsive Styles - Main Card */
+@media screen and (max-width: 576px){
+    .card_header button:nth-child(2){
+        width: 120px;
+        margin-right: 10px;
+    }
+    .card_header button:nth-child(1){
+        font-size: 13px;
+        width: 150px;
+        margin-right: 10px;
+    }
+    .peer:placeholder-shown ~ .peer-placeholder-shown\:text-sm {
+        font-size: 0.75rem !important; 
+        line-height: 1.25rem;
+    }
+}
+@media screen and (max-width: 692px){
+    .card_body {
+        padding: 10px;
+        display: grid;
+        border-radius: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        border: none;
+    }
+    .card_body .statistic_section {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+ 
+    .card_header button{
+        max-width: 70px;
+        font-size: 15px;
+    }
+    .card_body .name {
+        font-size: 30px;
+        text-align: center;
+        color: rgb(62, 62, 62);
+    }
+    .card_body .username {
+        transition: .4s;
+        cursor: pointer;
+        color: #10c085;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .card_body .user_bio {
+        color: rgb(62, 62, 62);
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    .wrapper {
+        max-width: 1000px;
+        padding: 0 30px;
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 880px){
+    .card_header div {
+        width: 70%;
+        margin-right: 10px;
+    }
+    .card_header button:nth-child(1){
+        width: 150px;
+    }
+}
+@media screen and (max-width: 992px){
+
+}
+@media screen and (max-width: 1200px){
+}
+
+
+/* Light and Dark mode in CSS */
+@media (prefers-color-scheme: light) {
+    
+}
+@media (prefers-color-scheme: dark) {
+    .card_body{
+        color: white;
+    }
+    .card_body .name{
+        color: white;
+    }
+    .card_body .user_bio {
+        color: rgb(254 253 253);
+    }
+    body{
+        background:  black;
+    }
+    
+    .card_body{
+        padding: 10px;
+        border:none;
+        width: 100%;
+    }
+    .card_header input{
+        background: transparent;
+    }
+    .card_header input {
+        border: 1px solid rgba(192, 192, 192, 0.345);
+    }
+    .card_header input::placeholder{
+        color: gray;
+    }
+}
